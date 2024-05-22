@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Prompt user for input
+echo "Enter a number"
+read n
+
+# Initialize sum to zero
+sum=0
+
+# Loop from 1 to n and calculate the sum
+for ((i=1; i<=n; i++))
+do
+    sum=$((sum + i))
+done
+
+# Print the result
+echo "The sum of the first $n natural numbers is: $sum"

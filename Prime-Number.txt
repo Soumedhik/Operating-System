@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Enter a number"
+read number
+
+# Initialize count to zero
+count=0
+
+# Loop from 2 to number-1 to check for divisors
+for ((i=2; i<number; i++))
+do
+    if [ $((number % i)) -eq 0 ]; then 
+        count=$((count + 1))
+    fi
+done
+
+# Check if count is still 0
+if [ $count -eq 0 ]; then
+    echo "It is a Prime number"
+else
+    echo "It is not a Prime number"
+fi

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Prompt user for input
+echo "Enter the value of n (number of odd terms)"
+read n
+
+# Initialize sum to zero
+sum=0
+
+# Calculate the sum of the first n odd numbers
+for ((i=0; i<n; i++))
+do
+    odd_number=$((2 * i + 1))
+    sum=$((sum + odd_number))
+done
+
+# Print the result
+echo "The sum of the first $n odd natural numbers is: $sum"
